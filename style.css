@@ -1,87 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Libre+Baskerville:wght@400;700&display=swap');
+/* Vintage newspaper CSS */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:400,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-body {
-    font-family: 'Libre Baskerville', serif;
-    background-color: #fdf6e3;
-    color: #111;
-    margin: 0;
-    padding: 0;
+:root{
+  --paper:#fbf7ec;
+  --ink:#111111;
+  --accent:#9b7a4a;
+  --col-max:1100px;
 }
 
-header {
-    background-color: #e6ddc6;
-    border-bottom: 4px double #333;
-    padding: 20px;
-    text-align: center;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Libre Baskerville', serif;
+  background:var(--paper);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:40px;
 }
 
-header h1 {
-    font-family: 'IM Fell English', serif;
-    font-size: 3rem;
-    margin: 0;
+/* Header */
+.header-wrap{
+  background:#efe4cc;
+  border-bottom:4px double var(--ink);
+  padding:28px 8px;
+  text-align:center;
+}
+.site-title{
+  margin:0;
+  font-family:'IM Fell English', serif;
+  font-size:44px;
+  letter-spacing:1px;
+}
+.tagline{font-size:0.95rem; margin-top:6px;}
+
+nav.topnav{margin-top:14px}
+nav.topnav a{
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:700;
+  margin:0 12px;
+  text-transform:uppercase;
+  font-size:0.85rem;
+}
+nav.topnav a:hover{ text-decoration:underline }
+
+.container{
+  max-width:var(--col-max);
+  margin:28px auto;
+  padding:0 18px;
+  display:flex;
+  gap:28px;
 }
 
-nav {
-    margin-top: 10px;
+.article{
+  flex:3 1 0;
+}
+.sidebar{
+  flex:1 0 260px;
+  border-left:1px solid #cab99a;
+  padding-left:20px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #111;
-    font-weight: bold;
-    margin: 0 15px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+.article h2{
+  font-family:'IM Fell English', serif;
+  font-size:28px;
+  margin:0 0 10px 0;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:6px;
+}
+.article .byline{font-size:0.85rem; color:#333; margin-bottom:12px}
+
+.article p{line-height:1.6; text-align:justify; margin:0 0 12px 0; font-size:1.02rem}
+/* Drop cap */
+.article p:first-of-type::first-letter{
+  float:left;
+  font-size:3.2rem;
+  line-height:0.8;
+  padding-right:8px;
+  padding-top:4px;
+  font-weight:700;
+  font-family:'IM Fell English', serif;
 }
 
-nav a:hover {
-    text-decoration: underline;
+/* Sidebar boxes */
+.box{background:#f8f2e0; padding:12px; margin-bottom:18px; border:1px solid #e0d4ba}
+.box h3{margin:0 0 8px 0; font-size:1rem}
+.box p{margin:0; font-size:0.95rem}
+
+/* Newspaper style columns inside article */
+.article .columns{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:26px;
 }
 
-main {
-    display: flex;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 15px;
-    gap: 30px;
+/* For pages where article itself wants two newspaper columns */
+.article .news-columns{
+  column-count:2;
+  column-gap:34px;
+}
+.article .news-columns p{break-inside:avoid-column}
+
+footer{
+  max-width:var(--col-max);
+  margin:36px auto 10px auto;
+  padding:18px;
+  border-top:2px solid var(--ink);
+  text-align:center;
+  color:#333;
+  font-size:0.9rem;
 }
 
-.article {
-    flex: 3;
-}
-
-.article h2 {
-    font-family: 'IM Fell English', serif;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.article p:first-letter {
-    font-size: 2.5rem;
-    float: left;
-    margin-right: 8px;
-    line-height: 1;
-    font-weight: bold;
-}
-
-.sidebar {
-    flex: 1;
-    border-left: 1px solid #aaa;
-    padding-left: 20px;
-}
-
-.sidebar .box {
-    margin-bottom: 20px;
-    background-color: #f8f1de;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-footer {
-    text-align: center;
-    padding: 15px;
-    border-top: 2px solid #333;
-    margin-top: 30px;
-    font-size: 0.8rem;
+/* Responsive */
+@media (max-width:900px){
+  .container{flex-direction:column}
+  .sidebar{border-left:0;padding-left:0}
+  .article .columns{grid-template-columns:1fr}
+  .article .news-columns{column-count:1}
+  nav.topnav{display:flex;flex-wrap:wrap;justify-content:center}
+  nav.topnav a{margin:6px}
 }
