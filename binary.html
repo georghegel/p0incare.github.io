@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CyberSec Times — Binary Exploitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header-wrap">
+    <h1 class="site-title">CyberSec Times</h1>
+    <div class="tagline">Binary Exploitation — In the old style</div>
+    <nav class="topnav" aria-label="Main">
+      <a href="index.html">Latest</a>
+      <a href="binary.html">Binary Exploitation</a>
+      <a href="kernel.html">Kernel Exploitation</a>
+      <a href="fuzzers.html">Fuzzers</a>
+      <a href="malware.html">Malware Analysis</a>
+      <a href="writeups.html">Writeups</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="article">
+      <h2>Stackcraft: Tales of Return-Oriented Elegance</h2>
+      <div class="byline">By A. Analyst — August 7, 2025</div>
+
+      <div class="news-columns">
+        <p>Exploit development often reads like fine craftsmanship — a sequence of small works assembled into an elegant whole. In this dispatch we examine return-oriented techniques that abuse legitimate instruction sequences to repurpose runtime flow.</p>
+
+        <p>The article walks through a disassembly example, demonstrates gadget discovery strategies, and outlines common defenses that raise the cost of exploitation. Readers familiar with ASLR and DEP will find practical notes on bypass patterns.</p>
+
+        <p>Mitigation guidance: compile-time hardening, pointer encryption, and control-flow integrity mechanisms offer layered defenses. Still, exploitation evolves: attackers adapt faster than any single mitigation can fully repel.</p>
+      </div>
+
+      <p>Appendices include sample scripts for gadget harvesting and safe lab setups for experimentation. Always follow ethical guidelines and confine experiments to isolated environments.</p>
+    </article>
+
+    <aside class="sidebar">
+      <div class="box">
+        <h3>Workshop</h3>
+        <p>Set up a QEMU sandbox with snapshotting to test exploits without risk to host systems.</p>
+      </div>
+
+      <div class="box">
+        <h3>Glossary</h3>
+        <p>ROP — Return-Oriented Programming</p>
+        <p>Gadget — short instruction sequence ending in `ret` used by ROP chains.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>© 2025 CyberSec Times</footer>
+</body>
+</html>
