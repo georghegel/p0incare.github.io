@@ -1,61 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CyberSec Times — Latest</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Blog – About</title>
+  <style>
+    body {
+      background: #fff;
+      font-family: sans-serif;
+      font-size: 18px;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px;
+      text-align: center;
+    }
+    h1 { font-size: 24px; }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #0b57d0;
+    }
+    nav a:hover { text-decoration: underline; }
+    .hr { height: 1px; background: #eee; margin: 24px auto; }
+  </style>
 </head>
 <body>
-  <header class="header-wrap">
-    <h1 class="site-title">CyberSec Times</h1>
-    <div class="tagline">A vintage dispatch for modern security minds</div>
-    <nav class="topnav" aria-label="Main">
-      <a href="index.html">Latest</a>
-      <a href="binary.html">Binary Exploitation</a>
-      <a href="kernel.html">Kernel Exploitation</a>
-      <a href="fuzzers.html">Fuzzers</a>
-      <a href="malware.html">Malware Analysis</a>
-      <a href="writeups.html">Writeups</a>
-      <a href="about.html">About</a>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="malware_analysis.html">Malware Analysis</a>
+      <a href="fuzzing.html">Fuzzing</a>
+      <a href="expdev.html">ExpDev</a>
     </nav>
+    <div class="hr"></div>
   </header>
 
-  <main class="container">
-    <article class="article">
-      <h2>Breaking: Vulnerability in Widely-Used Library — A Thread Unravels</h2>
-      <div class="byline">By The Times Security Desk — August 8, 2025</div>
-
-      <div class="news-columns">
-        <p>Researchers at several coordinating institutions today disclosed a high-severity memory-corruption flaw in a ubiquitous parsing library used by many networked services. The flaw allows a carefully crafted input to corrupt heap metadata and lead to arbitrary code execution when linked with specific versions of the runtime.</p>
-
-        <p>Administrators are urged to apply vendor patches as they become available. Forensics teams observed limited exploitation in targeted attack clusters, though full-scale exploitation remains unconfirmed. The community response has been swift: advisories, temporary mitigations, and an outpouring of technical analysis in public channels.</p>
-
-        <p>Security practitioners should review their dependency trees and verify update timelines. The fragility of complex supply chains was on stark display — a single flawed routine cascaded into widespread alarm.</p>
-      </div>
-
-      <p>Beyond the immediate technicalities, the episode revived debates on responsible disclosure timelines and automated dependency scanning. Meanwhile, defenders prepare signatures and mitigations, and researchers probe for secondary effects.</p>
-    </article>
-
-    <aside class="sidebar">
-      <div class="box">
-        <h3>On This Day</h3>
-        <p>Aug 8 — Historical note: early worms and coordinated patch responses shaped modern incident response practices.</p>
-      </div>
-
-      <div class="box">
-        <h3>Tip of the Day</h3>
-        <p>Prefer deterministic builds and pinned dependencies in production. Unexpected transitive updates are frequent danger sources.</p>
-      </div>
-
-      <div class="box">
-        <h3>Latest Bulletins</h3>
-        <p>— Advisory: patch available for LibraryX v2.3.1</p>
-        <p>— Proof-of-concept analysis pending forensic review</p>
-      </div>
-    </aside>
+  <main>
+    <h2>About</h2>
+    <p>Python developer and cybersecurity enthusiast. This is the About page body.</p>
   </main>
-
-  <footer>© 2025 CyberSec Times — Anachronistic but accurate.</footer>
 </body>
 </html>

@@ -1,55 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CyberSec Times — Fuzzers</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Blog – Fuzzing</title>
+  <style>
+    body {
+      background: #fff;
+      font-family: sans-serif;
+      font-size: 18px;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px;
+      text-align: center;
+    }
+    h1 { font-size: 24px; }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #0b57d0;
+    }
+    nav a:hover { text-decoration: underline; }
+    .hr { height: 1px; background: #eee; margin: 24px auto; }
+  </style>
 </head>
 <body>
-  <header class="header-wrap">
-    <h1 class="site-title">CyberSec Times</h1>
-    <div class="tagline">Fuzzers — The art of automated discovery</div>
-    <nav class="topnav" aria-label="Main">
-      <a href="index.html">Latest</a>
-      <a href="binary.html">Binary Exploitation</a>
-      <a href="kernel.html">Kernel Exploitation</a>
-      <a href="fuzzers.html">Fuzzers</a>
-      <a href="malware.html">Malware Analysis</a>
-      <a href="writeups.html">Writeups</a>
-      <a href="about.html">About</a>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="malware_analysis.html">Malware Analysis</a>
+      <a href="fuzzing.html">Fuzzing</a>
+      <a href="expdev.html">ExpDev</a>
     </nav>
+    <div class="hr"></div>
   </header>
 
-  <main class="container">
-    <article class="article">
-      <h2>Fuzzing the Lab: From Dumb Mutations to Smart Coverage</h2>
-      <div class="byline">By The Fuzzing Desk — June 12, 2025</div>
-
-      <div class="news-columns">
-        <p>Fuzzers remain essential to uncovering logic flaws and memory corruption bugs. This article contrasts mutation-based fuzzers with grammar-aware and coverage-guided tools, and offers guidance on improving results in constrained testbeds.</p>
-
-        <p>Key takeaways: seed quality matters; instrumentation increases find rates; and prioritizing test cases by crash uniqueness reduces triage effort. The story includes a simple harness example for a network service and a primer on crash deduplication.</p>
-
-        <p>Join the community lab nights to learn to set up afl++, honggfuzz, and libFuzzer with minimal fuss.</p>
-      </div>
-
-      <p>Fuzzing may feel like casting a wide net — but with careful measurement and curation, it becomes a scalpel: precise, revealing, and invaluable to defenders.</p>
-    </article>
-
-    <aside class="sidebar">
-      <div class="box">
-        <h3>Quick Setup</h3>
-        <p>Use Docker images pre-built for afl++ to avoid lengthy compilation on host systems.</p>
-      </div>
-
-      <div class="box">
-        <h3>Reading</h3>
-        <p>Recommended: classic papers on coverage-guided fuzzing and mutation strategies.</p>
-      </div>
-    </aside>
+  <main>
+    <h2>Fuzzing</h2>
+    <p>This is the body of the Fuzzing page. Add notes on fuzzing frameworks, experiments, and discoveries.</p>
   </main>
-
-  <footer>© 2025 CyberSec Times</footer>
 </body>
 </html>
