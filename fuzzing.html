@@ -23,6 +23,14 @@
     }
     nav a:hover { text-decoration: underline; }
     .hr { height: 1px; background: #eee; margin: 24px auto; }
+    .center-block {
+      text-align: center;
+      max-width: 500px;   /* adjust width */
+      margin: 0 auto;
+    }
+    .center-block p {
+      margin: 6px 0;
+    }
   </style>
 </head>
 <body>
@@ -37,10 +45,10 @@
     <div class="hr"></div>
   </header>
 
-  <main>
+  <div class="center-block">
     <h2>fuzzing</h2>
     <p>papers, practice on using syzkaller, afl++ etc.</p>
     <div class="hr"></div>
-  </main>
+  </div>
 </body>
 </html>
